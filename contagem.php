@@ -57,3 +57,5 @@ if (isset($_POST['reset'])) {
 }
 
 echo "Total: $contagem";
+
+echo "fim";
