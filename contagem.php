@@ -3,19 +3,16 @@
 <form action="#" method="post">
   <div>
     <label for="contagem">Cartas:</label>
-    <button name="contagem" value="2">2</button>
-    <button name="contagem" value="3">3</button>
-    <button name="contagem" value="4">4</button>
-    <button name="contagem" value="5">5</button>
-    <button name="contagem" value="6">6</button>
-    <button name="contagem" value="7">7</button>
-    <button name="contagem" value="8">8</button>
-    <button name="contagem" value="9">9</button>
-    <button name="contagem" value="10">10</button>
-    <button name="contagem" value="10">J</button>
-    <button name="contagem" value="10">Q</button>
-    <button name="contagem" value="10">K</button>
-    <button name="contagem" value="11">AS</button>
+    <form action="processar.php" method="POST">
+      <?php
+    $values = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'AS');
+    
+    foreach ($values as $value) {
+        echo '<button type="submit" name="contagem" value="' . $value . '">' . $value . '</button>';
+    }
+    ?>
+    </form>
+
     <!-- <input type="number" value=<?= $_POST['contagem'] ?? 0 ?> name="contagem" id="contagem" min="2" max="10"> -->
     <label for="baralhos">Baralhos:</label>
     <select name="baralhos" id="baralhos">
